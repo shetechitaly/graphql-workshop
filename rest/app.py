@@ -1,15 +1,13 @@
 from flask import jsonify
+from flask_restless import APIManager
 from persistence import *
+
+manager = APIManager(app, flask_sqlalchemy_db=db)
+manager.create_api(Astronauts)
+manager.create_api(Vehicles)
+manager.create_api(Evas)
 
 
 @app.route('/')
 def index():
   return 'Hello from the Stars!'
-  
-@app.route('/astronauts')
-def astronauts():
-  return jsonify([a.as_dict() for a in Astronauts.query.all()])
-
-@app.route('/astronauts/<int:astronaut_id>')
-def astronaut(astronaut_id):
-  return jsonify(Astronauts.query.filter_by(id=astronaut_id).first().as_dict())

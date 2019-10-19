@@ -12,6 +12,7 @@ pylint = "*"
 sqlalchemy = "*"
 psycopg2 = "*"
 flask-sqlalchemy = "*"
+flask-restless = "*"
 
 [requires]
 python_version = "3.6.8"
