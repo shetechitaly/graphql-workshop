@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
+app.run(host='0.0.0.0')
 db = SQLAlchemy(app)
-
 
 evas_crews = db.Table('evas_crews',
     db.Column('astronaut_id', db.Integer, db.ForeignKey('astronauts.id'), primary_key=True),

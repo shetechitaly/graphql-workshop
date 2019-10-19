@@ -11,3 +11,4 @@ manager.create_api(Evas)
 @app.route('/')
 def index():
   return 'Hello from the Stars!'
+
