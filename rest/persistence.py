@@ -18,7 +18,7 @@ class Astronauts(db.Model):
   evas = db.relationship(
         "Evas",
         secondary=evas_crews,
-        back_populates="astronaut")
+        back_populates="astronauts")
 
   def __init__(self, name, country):
     self.name = name
@@ -36,9 +36,10 @@ class Vehicles(db.Model):
 
 class Evas(db.Model):
   id = db.Column(db.Integer, primary_key=True)
-  date = db.Column(db.Date)
+  eva_date = db.Column(db.Date)
   duration = db.Column(db.Interval)
   purpose = db.Column(db.Text)
+  vehicle_id = db.Column(db.Integer, db.ForeignKey('vehicles.id'))
   vehicle = db.relationship("Vehicles", back_populates='evas')
   astronauts = db.relationship(
         "Astronauts",
@@ -46,8 +47,8 @@ class Evas(db.Model):
         back_populates="evas")
 
 
-  def __init__(self, date, duration, purpose):
-    self.date = date
+  def __init__(self, eva_date, duration, purpose):
+    self.eva_date = eva_date
     self.duration = duration
     self.purpose = purpose
  
