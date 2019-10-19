@@ -1,7 +1,12 @@
-from flask import Flask
+from flask_restless import APIManager
+from persistence import *
 
-app = Flask(__name__)
-app.config.from_pyfile('config.py')
+manager = APIManager(app, flask_sqlalchemy_db=db)
+manager.create_api(Astronauts)
+manager.create_api(Vehicles)
+manager.create_api(Evas)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+@app.route('/')
+def index():
+  return 'Hello from the Stars!'
+

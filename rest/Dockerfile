@@ -21,4 +21,4 @@ RUN pip install -r /wheels/requirements.txt -f /wheels && \
     rm -rf /root/.cache
 
 EXPOSE 5000
-CMD ["python", "app.py"]
+CMD ["flask", "run", "-h", "0.0.0.0"]
