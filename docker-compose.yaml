@@ -20,3 +20,15 @@ services:
       HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
     depends_on:
       - postgres
+  flask:
+    build: rest/
+    ports:
+      - '5000:5000'
+    restart: on-failure:10
+    environment:
+      POSTGRES_SCHEMA: postgres
+      POSTGRES_USER: user
+      POSTGRES_HOST: postgres
+      POSRGRES_PASSWORD: password
+    depends_on:
+      - postgres
