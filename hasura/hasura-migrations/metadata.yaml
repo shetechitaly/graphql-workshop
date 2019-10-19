@@ -1,0 +1,71 @@
+allowlist: []
+functions: []
+query_collections: []
+remote_schemas: []
+tables:
+- array_relationships: []
+  delete_permissions: []
+  event_triggers: []
+  insert_permissions: []
+  is_enum: false
+  object_relationships:
+  - comment: null
+    name: astronaut
+    using:
+      foreign_key_constraint_on: astronaut_id
+  - comment: null
+    name: eva
+    using:
+      foreign_key_constraint_on: eva_id
+  select_permissions: []
+  table: evas_crews
+  update_permissions: []
+- array_relationships:
+  - comment: null
+    name: evas_crews
+    using:
+      foreign_key_constraint_on:
+        column: astronaut_id
+        table: evas_crews
+  delete_permissions: []
+  event_triggers: []
+  insert_permissions: []
+  is_enum: false
+  object_relationships: []
+  select_permissions: []
+  table: astronauts
+  update_permissions: []
+- array_relationships:
+  - comment: null
+    name: evas
+    using:
+      foreign_key_constraint_on:
+        column: vehicle_id
+        table: evas
+  delete_permissions: []
+  event_triggers: []
+  insert_permissions: []
+  is_enum: false
+  object_relationships: []
+  select_permissions: []
+  table: vehicles
+  update_permissions: []
+- array_relationships:
+  - comment: null
+    name: evas_crews
+    using:
+      foreign_key_constraint_on:
+        column: eva_id
+        table: evas_crews
+  delete_permissions: []
+  event_triggers: []
+  insert_permissions: []
+  is_enum: false
+  object_relationships:
+  - comment: null
+    name: vehicle
+    using:
+      foreign_key_constraint_on: vehicle_id
+  select_permissions: []
+  table: evas
+  update_permissions: []
