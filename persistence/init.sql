@@ -469,7 +469,7 @@ INSERT INTO evas (id, eva_date, duration, purpose, vehicle_id)
          (75, '1995-02-09', '04:39:00', 'Cold environment eval', 137),
          (76, '1995-09-16', '06:46:00', 'ISS task board with worksite interface samples. Elec cuff checklist demo. Thermal cube experiment', 139),
          (77, '1996-01-15', '06:09:00', 'ISS umbilical tests with robotically transported portable work platform. Elec cuff checklist demo. ', 140),
-         (78, '1996-01-17', '06:53:00', 'ISS thermal comfort test', ),
+         (78, '1996-01-17', '06:53:00', 'ISS thermal comfort test', 141),
          (79, '1996-03-27', '06:03:00', 'Deploy 4 MEEP materials experiments on Mir docking module. Test US/Russian tether and PFR. Retrieve camera from docking module exterior', 141),
          (80, '1997-02-13', '06:42:00', 'HST servicing (first STS external airlock sortie', 143),
          (81, '1997-02-14', '07:27:00', 'HST servicing (remove/install FGS-1/FGS-1R', 143),
