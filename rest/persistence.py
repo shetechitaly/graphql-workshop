@@ -1,9 +1,6 @@
-from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from app import app
 
-app = Flask(__name__)
-app.config.from_pyfile('config.py')
-app.run(host='0.0.0.0')
 db = SQLAlchemy(app)
 
 evas_crews = db.Table('evas_crews',
