@@ -17,7 +17,7 @@ services:
       HASURA_GRAPHQL_ENABLE_CONSOLE: 'true'
       HASURA_DB_PASSWORD: password
       HASURA_GRAPHQL_DATABASE_URL: postgres://user:password@postgres:5432/postgres
-      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_ADMIN_SECRET: secret
     depends_on:
       - postgres
   flask:
