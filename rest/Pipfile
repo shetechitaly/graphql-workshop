@@ -9,6 +9,9 @@ verify_ssl = true
 flask = "*"
 flake8 = "*"
 pylint = "*"
+sqlalchemy = "*"
+psycopg2 = "*"
+flask-sqlalchemy = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6.8"
