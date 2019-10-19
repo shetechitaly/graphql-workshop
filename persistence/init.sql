@@ -762,7 +762,7 @@ INSERT INTO evas (id, eva_date, duration, purpose)
           (370, '2013/08/16', '07:29:00', 'Â Installed VINOSLIVOST experiment on MRM2'),
           (371, '2013/08/22', '05:58:00', 'Â Retrieved laser downlink comm experiment from SM and replaced it with a biaxial camera pointing system. Â Inspected all 6 ATV WAL PCE antennas and tightened loose screws that lost an antenna cover overboard. Â collected surface ÂTestÂ samples on MRM2 EV Hatch 2 Â Installed 2 gap spanners on SM Displayed Russian flag for national holiday"');
 
-CREATE TABLE evas_crew(
+CREATE TABLE evas_crews(
   eva_id int not null,
   vehicle_id int not null,
   astronaut_id int not null,
@@ -772,7 +772,7 @@ CREATE TABLE evas_crew(
   FOREIGN KEY (astronaut_id) REFERENCES astronauts(id)
 );
 
-INSERT INTO evas_crew(eva_id, vehicle_id, astronaut_id)
+INSERT INTO evas_crews(eva_id, vehicle_id, astronaut_id)
 VALUES (1, 8, 46), 
        (2, 10, 39), 
        (3, 9, 47), 
