@@ -8,7 +8,7 @@ db = SQLAlchemy(app)
 
 evas_crews = db.Table('evas_crews',
     db.Column('astronaut_id', db.Integer, db.ForeignKey('astronauts.id'), primary_key=True),
-    db.Column('eva_id', db.Integer, db.ForeignKey('ebas.id'), primary_key=True)
+    db.Column('eva_id', db.Integer, db.ForeignKey('evas.id'), primary_key=True)
 )
 
 class Astronauts(db.Model):
