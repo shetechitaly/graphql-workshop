@@ -13,7 +13,6 @@ sqlalchemy = "*"
 psycopg2 = "*"
 flask-sqlalchemy = "*"
 flask-restless = "*"
-psycopg2-binary = "*"
 
 [requires]
 python_version = "3.6.8"
