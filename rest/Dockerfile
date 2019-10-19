@@ -13,6 +13,9 @@ RUN pipenv lock -r > requirements.txt && pip wheel -r requirements.txt
 
 FROM base
 
+RUN apk add --no-cache --upgrade postgresql-dev && \
+    rm -rf /var/cache/apk/*
+
 WORKDIR /rest
 COPY . ./
 COPY --from=builder /wheels /wheels
