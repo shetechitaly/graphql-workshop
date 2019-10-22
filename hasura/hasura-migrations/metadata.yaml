@@ -32,7 +32,15 @@ tables:
   insert_permissions: []
   is_enum: false
   object_relationships: []
-  select_permissions: []
+  select_permissions:
+  - comment: null
+    permission:
+      allow_aggregations: false
+      columns:
+      - id
+      - name
+      filter: {}
+    role: user
   table: astronauts
   update_permissions: []
 - array_relationships:
