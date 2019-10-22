@@ -13,13 +13,19 @@ evas_crews = db.Table('evas_crews',
 class Astronauts(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(100))
-  country = db.Column(db.String(10))
   evas = db.relationship(
         "Evas",
         secondary=evas_crews,
         back_populates="astronauts")
 
-  def __init__(self, name, country):
+  def __init__(self, name):
+    self.name = name
+    
+
+class Astronauts2(Astronauts):
+  country = db.Column(db.String(10))
+
+  def __init__(self, name):
     self.name = name
     self.country = country
     
